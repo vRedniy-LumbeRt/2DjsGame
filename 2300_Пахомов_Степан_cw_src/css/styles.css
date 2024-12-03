@@ -1,0 +1,111 @@
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Шрифт по умолчанию */
+    text-align: center; /* Центрирование текста */
+    background-size: cover; /* Растягивает изображение на весь экран */
+    background-position: center; /* Центрирует изображение фона */
+
+    display: flex; /* Использование flexbox для вертикального размещения */
+    flex-direction: column; /* Вертикальное расположение элементов */
+    justify-content: center; /* Центрирование расположение элементов */
+    align-items: center; /* Центрирование по горизонтали */
+    min-height: 100vh; /* Устанавливает минимальную высоту элемента равной высоте viewport (экрана).
+                          Это гарантирует, что контент всегда будет виден, даже если страница короткая.
+                          Например, если пользователь уменьшит размер окна браузера, контент не исчезнет. */
+
+    background-color: black;
+    margin: 0; /* Предотвращает ползание экрана при нажатии клавиш */
+}
+
+/* Стиль для заголовков */
+h1 {
+    margin: 20px 0; /* Отступы для заголовка */
+    position: fixed; /* Закрепляем заголовок */
+    top: 20px; /* Расстояние от верхней границы -- закрепляет объект вверху страницы */
+}
+
+#loginForm {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px; /* Расширяет видимую границу блока */
+    border-radius: 20px; /* Отвечает за округлсть границ */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Затемняет область вокруг границы */
+}
+
+#loginForm input[type="text"] {
+    padding: 10px; /* Увеличивает границу блока ввода */
+    width: 200px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+#loginForm input[type="submit"] {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s; /* Плавный переход для фона */
+}
+
+/* Затемнение кнопки при наведении -- hover выбирает элементы, когда курсор находится над ними*/
+#loginForm input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#gameContainer {
+    display: none; /* Скрываем контейнер игры по умолчанию */
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Центрует содержимое по горизонтали */
+    align-items: center; /* Центрует содержимое по вертикали */
+    gap: 50px; /* Отступ между элементами */
+}
+
+#topTable, #gameCanvas, #next_tetrino {
+    background-color: rgba(255, 255, 255, 0.6); /* Полупрозрачный белый фон */
+    border: 3px solid black;
+    border-radius: 15px; /* Закругленные углы */
+    overflow: hidden; /* Скрытие элементов, которые выходят за границы */
+}
+
+#info_text {
+    display: none; /* Скрываем контейнер игры по умолчанию */
+    max-width: 300px;
+}
+
+#topTable {
+    width: 100%;
+    overflow: hidden; /* Скрывает элементы, которые выходят за границы */
+}
+
+#topTable table {
+    width: 100%;
+}
+
+#topTable th, #topTable td {
+    padding: 10px; /* Внутренние отступы */
+    text-align: center; /* Центрирование текста */
+}
+
+#topTable th {
+    font-weight: bold; /* Жирный шрифт для заголовков */
+}
+
+#newGameButton {
+    padding: 10px 20px; /* Отступы вокруг текста */
+    background-color: #4CAF50; /* Зеленый цвет фона */
+    color: white; /* Цвет текста */
+    border: none; /* Убираем стандартную границу */
+    border-radius: 5px; /* Закругленные углы */
+    font-size: 16px; /* Размер шрифта */
+    transition: background-color 0.3s; /* Плавный переход для фона */
+}
+
+#newGameButton:hover {
+    background-color: #45a049; /* Темно-зеленый цвет при наведении */
+}

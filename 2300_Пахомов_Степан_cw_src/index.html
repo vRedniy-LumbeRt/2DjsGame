@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Game</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="result"></div>
+
+<!-- Форма входа -->
+<div id="loginForm">
+    <!-- event.preventDefault(): Предотвращает стандартное поведение отправки формы. -->
+    <form id="userForm" action="#" method="get" onsubmit="storeUsername(); event.preventDefault(); showGame(); gameManager.play();">
+        <label>
+            Введите имя пользователя:<br>
+            <input id="usernameInput" type="text" placeholder="Имя пользователя" required><br>
+        </label>
+        <!-- Тип элемента, который отправляет форму при нажатии -->
+        <input type="submit" value="Ввод">
+    </form>
+</div>
+
+<!-- Контейнер игры -->
+<div id="gameContainer">
+
+
+
+    <!-- Таблица с топ-7 игроками -->
+    <div id="topTable" style="display: none;">
+        <h3>Топ 7 игроков</h3>
+        <table>
+            <thead>
+            <tr>
+                <th>Имя</th>
+                <th>Счёт</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Строки с игроками будут добавлены динамически -->
+            </tbody>
+        </table>
+
+        <div id = info_text>
+            <h3>Текущий пользователь: <span id="currentUser"></span></h3>
+            <h3>Счёт: <span id="score">0</span></h3>
+            <h3>HP: <span id="hp">0</span></h3>
+            <button id="newGameButton" onclick="gameManager.restartLevel()">Новая игра</button>
+        </div>
+    </div>
+
+    <!-- Основная игра -->
+    <div id="game" style="display: none;">
+
+        <!-- Контейнером для графических элементов -->
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/dataUsage.js"></script>
+<script src="js/eventsManager.js"></script>
+<script src="js/mapManager.js"></script>
+<script src="js/spriteManager.js"></script>
+<script src="js/gameManager.js"></script>
+<script src="js/physicManager.js"></script>
+<script src="js/soundManager.js"></script>
+</body>
+</html>

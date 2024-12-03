@@ -1,0 +1,14 @@
+{
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.20.3"
+  },
+  "type": "module",
+  "name": "express-cc",
+  "keywords": [
+    "express"
+  ],
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
